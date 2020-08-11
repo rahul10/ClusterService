@@ -1,0 +1,8 @@
+---
+ - hosts: nn
+   tasks:
+    - name: upload  
+      shell: '/hadoop2/sbin/hadoop-daemon.sh  start datanode'
+    - name: starting  nodemagers 
+      shell: '/hadoop2/sbin/yarn-daemon.sh  start nodemanager'
+    

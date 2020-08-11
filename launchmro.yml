@@ -1,0 +1,13 @@
+---
+ - hosts: 1dn,2dn,3dn
+   tasks:
+    - name: starting  nodemangager
+      shell: '/hadoop2/sbin/yarn-daemon.sh  start nodemanager'
+
+  
+ - hosts: nn
+   tasks:
+    - name: starting  resourcemanager
+      shell: '/hadoop2/sbin/yarn-daemon.sh  start resourcemanager'
+
+

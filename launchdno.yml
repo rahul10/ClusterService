@@ -1,0 +1,14 @@
+---
+ - hosts: nn
+   tasks:
+    - name: starting  namenode
+      shell: '/hadoop2/sbin/hadoop-daemon.sh  start namenode'
+
+ - hosts: 1dn,2dn,3dn
+   tasks:
+    - name: starting  datanodes
+      shell: '/hadoop2/sbin/hadoop-daemon.sh  start datanode'
+
+ 
+ 
+ 
